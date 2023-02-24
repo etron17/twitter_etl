@@ -7,10 +7,10 @@ import s3fs
 
 def run_twitter_etl():
 
-    api_key = "TcMW7FhE6ShD4QKU6wpURSMbP"
-    api_secret = "KIOm8uwdqLCbUlvNCSflGHim0Zhk7mIirA8Abp99ui5Bb8GoXE"
-    acc_key = "903628651228524545-6ZHcMCcGFVLfbKzi3cWVHnXMnLedflQ"
-    acc_secret = "g7K1iGBF0WFmlW9oCCAf0useQBdCHMgMQfP6ngVZdrESO"
+    api_key = "{Your api key}"
+    api_secret = "{Your api secret}"
+    acc_key = "{Your acc key}"
+    acc_secret = "{Your acc secret}"
 
     # Twitter authentication
     auth = tweepy.OAuthHandler(api_key, api_secret)
@@ -42,7 +42,7 @@ def run_twitter_etl():
 
 
     df = pd.DataFrame(list)
-    df.to_csv('s3://bigdo-bucket/test_tweets.csv')
+    df.to_csv('{your S3 address}')
 
 
 run_twitter_etl()
